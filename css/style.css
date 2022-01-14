@@ -156,7 +156,6 @@ main {
 /*---------CARD---------*/
 
 .card {
-    text-align: center;
 }
 .card-header {
     background:  linear-gradient(to bottom, rgba(29, 40, 42, 0), rgb(29, 40, 42)), url(../img/egenreklame2.jpg) var(--blue);
@@ -171,9 +170,9 @@ main {
     justify-content: center;
     min-height: 400px;
 }
-.card-header h2 {
+.card-text h2 {
     font-size: 2.4rem;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 .card-text-container {
     padding: 40px;
@@ -189,23 +188,29 @@ main {
 
 @media only screen and (min-width: 600px) {
     .card {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        min-height: 400px;
+        
     }
     .card-header {
-        background:  linear-gradient(to bottom, rgba(29, 40, 42, 0), rgb(29, 40, 42)), url(../img/egenreklame2.jpg) var(--blue);
+        background:  linear-gradient(to bottom, rgba(29, 40, 42, 0), rgba(29, 40, 42, 0)), url(../img/egenreklame2.jpg) var(--blue);
         /* background-attachment: fixed; */
         background-position: top center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
+        max-width: 1000px;
+        min-height: 500px;
     }
     .card-text-container {
         align-items: center;
         justify-content: center;
-        padding: 100px;
-        width: 100%;
+        padding: 40px;
+        max-width: 1000px
+    }
+    .card-text {
+        max-width: 600px;
+    }
+    .card-text button {
+        font-size: 1.2rem;
+        margin-top: 10px;
     }
 }
 
