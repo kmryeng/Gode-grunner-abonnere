@@ -129,50 +129,38 @@ hr {
 main {
     padding: 60px 20px;
     background-color: var(--light-clr);
-    text-align: center;
+}
+.main-content-box {
+    padding-bottom: 40px;
 }
 
-/*---------DATOER---------*/
-.main-dato {
-    color: var(--light-clr);
-    text-align: center;
-    color: var(--main-font-clr);
-    font-weight: 400;
-    font-size: 1.1rem;
-    line-height: 2rem;
-    padding-bottom: 4rem;
-}
+/*---------CARD---------*/
 
-.main-dato p {
-    max-width: 450px;
+.card {
+    min-height: 200px;
+    text-align: center;
 }
-.main-dato ul {
-    margin-top: 30px;
-    font-weight: 600;
-    list-style-type: none;
+.card-header {
+    background:  linear-gradient(to bottom, rgba(29, 40, 42, 0), rgb(29, 40, 42)), url(../img/egenreklame2.jpg) var(--blue);
+    /* background-attachment: fixed; */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    min-height: 200px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: center;
 }
-ul li {
-    display: inline-block;
-    font-size: 18px;
-    padding: 10px 10px;
+.card-header h2 {
+    font-size: 2rem;
 }
-.small-p {
-    font-size: 0.8rem;
-    line-height: 1.2rem;
+.card-text {
+    padding: 20px;
 }
-
-@media only screen and (min-width: 600px) {
-    .main-1 ul {
-        flex-direction: row;
-    }
-    .main-dato ul {
-        flex-direction: row;
-    }
+.card-text p {
+    padding-bottom: 10px;
 }
-
 /*---------BUTTON---------*/
 
 button {
@@ -184,7 +172,6 @@ button {
     border-radius: 50px;
     border: none;
     padding: 10px 30px;
-    margin-top: 30px;
     cursor: pointer;
 }
 
