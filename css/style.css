@@ -28,10 +28,10 @@ body {
 /*---------TYPOGRAPHY---------*/
 
 h1 {
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
     margin-bottom: 50px;
-    font-weight: 400;
+    font-weight: 500;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.26);
 }
 h2 {
@@ -68,9 +68,9 @@ hr {
     margin-bottom: 20px;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 600px) {
     h1 {
-        font-size: 3rem;
+        font-size: 3.4rem;
         text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.26);
         line-height: 6rem;
     }
@@ -89,19 +89,25 @@ hr {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 500px;
+    min-height: 100vh;
     text-align: center;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 0.4fr 2fr 0.6fr;
+    grid-template-columns: 1fr;
+    align-items: end;
+    justify-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .logo {
-    width: 120px;
-    margin: 0;
+    width: 100%;
+    padding-bottom: 60px;
     padding-top: 20px;
+}
+.logo img {
+    width: 120px;
 }
 
 .heading {
@@ -109,24 +115,23 @@ hr {
     max-width: 800px;
 }
 .header-price {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--blue);
-    border-radius: 50%;
-    height: 140px;
-    width: 140px;
+    padding-bottom: 20px;
 }
+
 
 @media only screen and (min-width: 600px) {
     .main-header {
         min-height: 100vh;
-        padding: 0x 500px 200px 0px;
+    }
+    .heading {
+        max-width: 1000px;
     }
     .header-price {
-        position: absolute;
-        right: 0;
-        margin-right: 200px;
+        padding-bottom: 100px;
+    }
+    .header-price p {
+        font-size: 1.6rem;
+        font-weight: 300;
     }
 }
 
@@ -144,12 +149,13 @@ main {
 @media only screen and (min-width: 600px) {
     main {
         max-width: 1000px;
-        padding: 60px 40px;
+        padding: 100px 40px;
     }
     .main-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 100px;
+        column-gap: 100px;
+        row-gap: 40px;
     }
 }
 
@@ -197,12 +203,12 @@ main {
         background-repeat: no-repeat;
         background-size: cover;
         max-width: 1000px;
-        min-height: 500px;
+        min-height: 400px;
     }
     .card-text-container {
         align-items: center;
         justify-content: center;
-        padding: 40px;
+        padding: 40px 40px 80px 40px;
         max-width: 1000px
     }
     .card-text {
@@ -265,7 +271,7 @@ footer {
     /* display: flex;
     flex-direction: column; */
     max-width: 400px;
-    padding: 60px 20px;
+    padding: 60px 0px;
 }
 
 .footer-logo {
