@@ -112,7 +112,7 @@ hr {
 
 .logo {
     width: 100%;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     padding-top: 20px;
 }
 .logo img {
@@ -152,22 +152,52 @@ hr {
 main {
     padding: var(--padding-mobile);
     background-color: var(--light-clr);
-    max-width: 400px;
+    max-width: 600px;
+}
+.main-content {
+
 }
 .main-content-box {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
     padding-bottom: 40px;
+    column-gap: 20px;
 }
 
-@media only screen and (min-width: 600px) {
+.ikon {
+    width: 70px;
+    align-self: center;
+}
+
+@media only screen and (min-width: 800px) {
     main {
-        max-width: 1000px;
-        padding: 100px 40px;
+        padding: 100px 20px 80px 20px;
+    }
+    .main-content-box {
+        padding-bottom: 80px;
+        column-gap: 40px;
+    }
+    .ikon {
+        width: 100px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    main {
+        max-width: 1400px;
+        padding: 140px 40px;
     }
     .main-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 100px;
-        row-gap: 40px;
+        row-gap: 80px;
+    }
+    .main-content-box {
+        gap: 60px;
+    }
+    .ikon {
+        width: 120px;
     }
 }
 
@@ -176,7 +206,7 @@ main {
 .card {
 }
 .card-header {
-    background:  linear-gradient(to bottom, rgba(29, 40, 42, 0), rgb(29, 40, 42)), url(../img/egenreklame2.jpg) var(--blue);
+    background: url(../img/egenreklame2.jpg);
     /* background-attachment: fixed; */
     background-position: top center;
     background-repeat: no-repeat;
@@ -186,18 +216,18 @@ main {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    min-height: 400px;
+    min-height: 300px;
 }
 .card-text h2 {
     font-size: 2rem;
     padding-bottom: 10px;
 }
 .card-text-container {
-    padding: 40px;
+    padding: 40px 20px;
     background: var(--grey);
 }
 .card-text {
-    max-width: 300px;
+    max-width: 400px;
 
 }
 .card-text p {
@@ -213,7 +243,7 @@ main {
         
     }
     .card-header {
-        background:  linear-gradient(to bottom, rgba(29, 40, 42, 0), rgba(29, 40, 42, 0)), url(../img/egenreklame2.jpg) var(--blue);
+        background: url(../img/egenreklame2.jpg);
         /* background-attachment: fixed; */
         background-position: top center;
         background-repeat: no-repeat;
@@ -321,6 +351,9 @@ footer a {
     }
     .footer-items {
         max-width: 600px;
+    }
+    .footer-logo {
+        width: 160px;
     }
 }
 
