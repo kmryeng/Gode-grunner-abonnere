@@ -7,8 +7,9 @@
     --light-clr: #f5f2ef;
     --grey: #e9e3db;
     --main-font-clr: #2e2e2e;
-    --light-blue: #18c9ff;
+    --light-blue: #299eff;
     --blue: #004d9d;
+    --padding-mobile: 60px 20px;
 }
 
 * {
@@ -50,9 +51,8 @@ header p {
     font-weight: 300;
 }
 .header-price strong {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    color: var(--light-blue);
 }
 .main-content strong {
     font-size: 20px;
@@ -83,7 +83,7 @@ hr {
         line-height: 5rem;
     }
     h2 {
-        font-size: 1.5em;
+        font-size: 2em;
         margin-bottom: 20px;
     }
 }
@@ -150,7 +150,7 @@ hr {
 /*---------MAIN---------*/
 
 main {
-    padding: 60px 20px;
+    padding: var(--padding-mobile);
     background-color: var(--light-clr);
     max-width: 400px;
 }
@@ -189,7 +189,7 @@ main {
     min-height: 400px;
 }
 .card-text h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     padding-bottom: 10px;
 }
 .card-text-container {
@@ -202,6 +202,10 @@ main {
 }
 .card-text p {
     padding-bottom: 10px;
+}
+.example a {
+    text-decoration: none;
+    font-weight: 500;
 }
 
 @media only screen and (min-width: 600px) {
@@ -235,7 +239,7 @@ main {
 /*---------EXAMPLE---------*/
 
 .example {
-    padding: 60px 20px;
+    padding: var(--padding-mobile);
 }
 .example-text-container {
     max-width: 400px;
@@ -273,11 +277,11 @@ main {
 
 footer {
     margin-top: 20px;
-    background-color: var(--dark-grey);
+    background:  linear-gradient(to bottom left, rgb(18, 26, 49), rgb(17, 74, 148));
     line-height: 1.8em;
     letter-spacing: 0.5px;
     color: var(--light-clr);
-    padding: 60px 20px;
+    padding: var(--padding-mobile);
 }
 
 .footer-items {
@@ -294,7 +298,10 @@ footer {
 footer a {
     text-decoration: none;
     color: var(--light-clr);
-    color: var(--light-clr);
+}
+
+footer a:hover {
+    color: var(--light-blue);
 }
 
 .footer-text {
@@ -329,8 +336,11 @@ button {
     border: none;
     padding: 10px 30px;
     cursor: pointer;
+    transition: 0.2s ease-in;
 }
 
 button:hover {
-    background-color: var(--light-blue);
+    color: var(--main-font-clr);
+    background-color: var(--grey);
+    box-shadow: 0px 0px 0px 3px var(--blue);
 }
